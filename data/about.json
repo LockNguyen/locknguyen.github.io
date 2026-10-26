@@ -1,0 +1,34 @@
+{
+  "paragraphs": [
+    "I build production software end to end. My work spans enterprise Vue and C# .NET services on SQL Server, Postgres-backed PWAs, and AI features that real users depend on.",
+    "At OneHope, a global nonprofit serving users in 100+ countries, I made the Planning dashboard load its data 20x faster (10s to 0.5s). I also shipped a request tracer across 14 .NET repos and remediated a critical CPU-exhaustion vulnerability.",
+    "As a volunteer AI Software Engineer, I built and maintain a church PWA with RAG-based Voice AI. It answers Vietnamese questions from English PDFs with citations, backed by a failover AI microservice that kept 99.9% uptime during LLM outages.",
+    "My favorite part of the job is sitting with stakeholders. I run interviews, turn complaints into user stories and acceptance criteria, and ship against what users approved beforehand. I also led a 6-person team building an AI Follicle Detector for a university biology lab (F1 0.89)."
+  ],
+  "highlights": [
+    {
+      "label": "Discipline",
+      "value": "Full-stack & applied AI engineering"
+    },
+    {
+      "label": "Stack",
+      "value": "Vue, C# .NET, SQL Server, PostgreSQL"
+    },
+    {
+      "label": "Experience",
+      "value": "2+ years on an enterprise platform"
+    },
+    {
+      "label": "Degree",
+      "value": "B.S. Computer Science, Liberty University"
+    },
+    {
+      "label": "Award",
+      "value": "1st Place, JMU Site (Div. II), ICPC US South"
+    },
+    {
+      "label": "Leadership",
+      "value": "President, Software Development Club"
+    }
+  ]
+}

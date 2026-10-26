@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+<title>PN-04 Advanced RAG LLM App</title>
+<desc>Blueprint schematic: documents are ingested, chunked, embedded and stored in SQLite. A hybrid vector and BM25 retriever feeds a citation prompt builder and an LLM layer. A FastAPI API and UI serves answers with sources.</desc>
+<defs>
+<pattern id="g" width="80" height="80" patternUnits="userSpaceOnUse">
+<path d="M16 0V80M32 0V80M48 0V80M64 0V80M0 16H80M0 32H80M0 48H80M0 64H80" fill="none" stroke="#EAF3FB" stroke-opacity="0.05" stroke-width="1"/>
+<path d="M0 0V80M0 0H80" fill="none" stroke="#EAF3FB" stroke-opacity="0.09" stroke-width="1"/>
+</pattern>
+<marker id="a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8z" fill="#EAF3FB" fill-opacity="0.8"/></marker>
+<marker id="k" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8z" fill="#9FDBFF"/></marker>
+<style>
+text{font-family:"IBM Plex Mono",SFMono-Regular,Consolas,monospace;font-size:9px;letter-spacing:0.06em;text-transform:uppercase;fill:#EAF3FB}
+.t{font-size:10px}
+.s{fill-opacity:0.7}
+.m{text-anchor:middle}
+.ac{fill:#9FDBFF}
+.b{fill:#0D3B66;stroke:#EAF3FB;stroke-opacity:0.7;stroke-width:1}
+.kb{fill:#0D3B66;stroke:#9FDBFF;stroke-width:1}
+.l{stroke:#EAF3FB;stroke-opacity:0.8;stroke-width:1;fill:none}
+.kl{stroke:#9FDBFF;stroke-width:1;fill:none}
+</style>
+</defs>
+<rect width="640" height="360" fill="#0D3B66"/>
+<rect width="640" height="360" fill="url(#g)"/>
+<rect x="16" y="16" width="608" height="20" fill="none" stroke="#EAF3FB" stroke-opacity="0.6"/>
+<text x="24" y="29.5" class="t">PN-04 · ADVANCED RAG LLM APP · HYBRID RETRIEVAL + CITED ANSWERS</text>
+
+<text x="16" y="55" class="s">INDEXING PATH</text>
+<rect class="b" x="16" y="62" width="122" height="50"/>
+<text x="77" y="84" class="m t">DOCUMENT</text>
+<text x="77" y="98" class="m t">INGEST</text>
+<rect class="b" x="178" y="62" width="122" height="50"/>
+<text x="239" y="91" class="m t">CHUNKING</text>
+<rect class="b" x="340" y="62" width="122" height="50"/>
+<text x="401" y="84" class="m t">EMBEDDINGS</text>
+<text x="401" y="98" class="m s">HASHING DEFAULT</text>
+<rect class="b" x="502" y="62" width="122" height="50"/>
+<text x="563" y="84" class="m t">SQLITE STORE</text>
+<text x="563" y="98" class="m s">LINEAR COSINE SCAN</text>
+<line class="l" x1="138" y1="87" x2="177" y2="87" marker-end="url(#a)"/>
+<line class="l" x1="300" y1="87" x2="339" y2="87" marker-end="url(#a)"/>
+<line class="l" x1="462" y1="87" x2="501" y2="87" marker-end="url(#a)"/>
+
+<rect class="b" x="16" y="120" width="122" height="24"/>
+<text x="77" y="136" class="m t"><tspan class="ac">13</tspan> DOCUMENTS</text>
+
+<text x="178" y="160" class="s">QUERY PATH</text>
+<rect class="kb" x="502" y="168" width="122" height="64"/>
+<text x="563" y="196" class="m t">HYBRID RETRIEVER</text>
+<text x="563" y="210" class="m s">VECTOR + BM25</text>
+<rect class="kb" x="340" y="168" width="122" height="64"/>
+<text x="401" y="196" class="m t">PROMPT BUILDER</text>
+<text x="401" y="210" class="m s">WITH CITATIONS</text>
+<rect class="kb" x="178" y="168" width="122" height="64"/>
+<text x="239" y="189" class="m t">LLM LAYER</text>
+<text x="239" y="203" class="m s">OFFLINE EXTRACTIVE</text>
+<text x="239" y="216" class="m s">OPENAI · OLLAMA</text>
+<line class="l" x1="563" y1="112" x2="563" y2="167" marker-end="url(#a)"/>
+<line class="kl" x1="502" y1="200" x2="463" y2="200" marker-end="url(#k)"/>
+<line class="kl" x1="340" y1="200" x2="301" y2="200" marker-end="url(#k)"/>
+
+<rect class="b" x="16" y="168" width="122" height="64"/>
+<text x="77" y="192" class="m s">EVAL SET</text>
+<text x="77" y="206" class="m t ac">41</text>
+<text x="77" y="220" class="m s">LABELED CASES</text>
+<line class="l" x1="178" y1="200" x2="139" y2="200" stroke-dasharray="3 3" marker-end="url(#a)"/>
+
+<line class="kl" x1="239" y1="232" x2="239" y2="287" marker-end="url(#k)"/>
+<text x="247" y="264" class="s">ANSWER + SOURCES</text>
+<line class="kl" x1="563" y1="288" x2="563" y2="233" marker-end="url(#k)"/>
+<text x="555" y="264" text-anchor="end" class="s">QUERY</text>
+
+<rect class="kb" x="16" y="288" width="608" height="40"/>
+<text x="320" y="306" class="m t">FASTAPI API / UI</text>
+<text x="320" y="319" class="m s">UPLOAD · CHAT · SOURCES · EVALUATION</text>
+<text x="16" y="342" class="s">DEFAULT LLM_PROVIDER=OFFLINE · NO API KEY</text>
+</svg>

@@ -1,0 +1,247 @@
+{
+  "projects": [
+    {
+      "name": "Viet Corner Website",
+      "category": "Community web platform",
+      "description": "A bilingual, real-time website for a local Vietnamese church community. It includes an admin system that lets non-technical staff manage events and nested discipleship courses, locations and classes.",
+      "highlights": [
+        "Three-level Firestore subcollection model with cascade deletes and confirmation warnings",
+        "English ↔ Vietnamese toggle via a custom, type-safe translation context",
+        "Firebase security rules enforce admin-only writes; TypeScript across 50+ components"
+      ],
+      "technologies": [
+        "Next.js",
+        "TypeScript",
+        "Firebase",
+        "Firestore",
+        "Tailwind CSS"
+      ],
+      "links": {
+        "source": "https://github.com/LockNguyen/Viet-Corner-Website",
+        "demo": "https://vietcorner.org/en"
+      },
+      "image": "assets/images/projects/viet-corner-website.svg",
+      "featured": true,
+      "hero": {
+        "src": "assets/images/projects/viet-corner-website-hero.jpg",
+        "alt": "Viet Corner Website — Concept render",
+        "caption": "Concept render"
+      }
+    },
+    {
+      "name": "LU Essentials Store",
+      "category": "Web application",
+      "description": "A responsive Vue 3 single-page storefront and inventory dashboard for a school-essentials store. Users can filter, sort and edit stock in a draft mode that commits changes in bulk.",
+      "highlights": [
+        "Write-back draft mode batches edits so 10 changes need 1 API call instead of 10",
+        "Decoupled filter and product Pinia stores with a custom persistence plugin",
+        "No-stock/low-stock cues, ARIA labels and a Vitest unit test suite"
+      ],
+      "technologies": [
+        "Vue 3",
+        "TypeScript",
+        "Pinia",
+        "Tailwind CSS",
+        "shadcn",
+        "Vitest"
+      ],
+      "links": {
+        "source": "https://github.com/LockNguyen/Students-Essentials-Store",
+        "demo": "https://lu-essentials.netlify.app/"
+      },
+      "image": "assets/images/projects/students-essentials-store.svg",
+      "featured": true,
+      "hero": {
+        "src": "assets/images/projects/students-essentials-store-hero.jpg",
+        "alt": "LU Essentials Store — Concept render",
+        "caption": "Concept render"
+      }
+    },
+    {
+      "name": "YouTube Jam",
+      "category": "Realtime web app",
+      "description": "A Vue 3 karaoke machine inspired by Spotify Jam and built on YouTube. Friends can queue songs, sync sessions and sing together.",
+      "highlights": [
+        "Shared song queue with synced sessions across friends",
+        "Thin-client frontend architecture with realtime UX",
+        "Performance intros to boost singers' confidence"
+      ],
+      "technologies": [
+        "Vue 3",
+        "TypeScript",
+        "Vite",
+        "Vitest",
+        "ESLint"
+      ],
+      "links": {
+        "source": "https://github.com/LockNguyen/YouTube-Jam",
+        "demo": "https://youtubejam.netlify.app/host?key=karaoke-host-dev"
+      },
+      "image": "assets/images/projects/youtube-jam.svg",
+      "featured": true,
+      "hero": {
+        "src": "assets/images/projects/youtube-jam-hero.jpg",
+        "alt": "YouTube Jam — Concept render",
+        "caption": "Concept render"
+      }
+    },
+    {
+      "name": "Advanced RAG LLM App",
+      "category": "Applied AI",
+      "description": "A question-answering assistant grounded in a controlled knowledge base. It combines document ingestion, hybrid vector and BM25 retrieval, prompt building with citations, and pluggable LLM providers.",
+      "highlights": [
+        "Evaluation set of 41 labeled cases over 13 documents, including unanswerable questions",
+        "Offline default mode runs with zero API keys; OpenAI and Ollama providers optional",
+        "Single FastAPI service with Dockerfile and Render blueprint"
+      ],
+      "technologies": [
+        "Python",
+        "FastAPI",
+        "SQLite",
+        "RAG",
+        "OpenAI API",
+        "Docker"
+      ],
+      "links": {
+        "source": "https://github.com/LockNguyen/advanced-rag-llm-app"
+      },
+      "image": "assets/images/projects/advanced-rag-llm-app.svg",
+      "hero": {
+        "src": "assets/images/projects/advanced-rag-llm-app-hero.jpg",
+        "alt": "Advanced RAG LLM App — Concept render",
+        "caption": "Concept render"
+      }
+    },
+    {
+      "name": "ContextLens",
+      "category": "Developer tools",
+      "description": "A VS Code extension that shows who wrote a line, why, and what the PR discussion said. It follows git blame to the pull request and caches ranked comments locally.",
+      "highlights": [
+        "Rate-limit-aware GitHub client with Retry-After and exponential backoff",
+        "Comment-ranking heuristic surfaces the top 3 most explanatory comments",
+        "SQLite cache via sql.js plus a background indexer for instant hovers"
+      ],
+      "technologies": [
+        "TypeScript",
+        "VS Code API",
+        "GitHub API",
+        "SQLite",
+        "Vitest"
+      ],
+      "links": {
+        "source": "https://github.com/LockNguyen/contextlens"
+      },
+      "image": "assets/images/projects/contextlens.svg",
+      "hero": {
+        "src": "assets/images/projects/contextlens-hero.jpg",
+        "alt": "ContextLens — Concept render",
+        "caption": "Concept render"
+      }
+    },
+    {
+      "name": "vuln-priority-engine",
+      "category": "Security tooling",
+      "description": "A tool that turns a scanner's flat CVE dump into a risk-ranked, SLA-bucketed remediation queue. It combines CVSS, EPSS exploit probability, CISA KEV and asset criticality.",
+      "highlights": [
+        "Adapters for Trivy JSON and generic CVE CSV exports into one normalized model",
+        "Configurable weighted risk-scoring policy with SLA buckets",
+        "68-test pytest suite; runs fully offline on bundled data"
+      ],
+      "technologies": [
+        "Python",
+        "FastAPI",
+        "pytest",
+        "Docker",
+        "YAML"
+      ],
+      "links": {
+        "source": "https://github.com/LockNguyen/vuln-priority-engine"
+      },
+      "image": "assets/images/projects/vuln-priority-engine.svg",
+      "hero": {
+        "src": "assets/images/projects/vuln-priority-engine-hero.jpg",
+        "alt": "vuln-priority-engine — Concept render",
+        "caption": "Concept render"
+      }
+    },
+    {
+      "name": "netcode-arena",
+      "category": "Game networking",
+      "description": "A 2-player arena with server-authoritative netcode built from scratch. It implements client-side prediction, server reconciliation and snapshot interpolation, tested under injected latency and packet loss.",
+      "highlights": [
+        "Engine-agnostic C# simulation core shared by client prediction and server tick",
+        "Headless, Dockerized UDP dedicated server",
+        "Damage stays server-authoritative; no extrapolation through geometry"
+      ],
+      "technologies": [
+        "C#",
+        ".NET",
+        "UDP",
+        "Docker"
+      ],
+      "links": {
+        "source": "https://github.com/LockNguyen/netcode-arena"
+      },
+      "image": "assets/images/projects/netcode-arena.svg",
+      "hero": {
+        "src": "assets/images/projects/netcode-arena-hero.jpg",
+        "alt": "netcode-arena — Concept render",
+        "caption": "Concept render"
+      }
+    },
+    {
+      "name": "field-ops-sql-cost-audit",
+      "category": "Data analytics",
+      "description": "A tested dbt and SQL analytics layer that reconciles messy field-operations data. It computes true cost-to-serve per job and route and shows where SLA breaches concentrate.",
+      "highlights": [
+        "Recursive CTEs for route sequencing and window functions for utilization",
+        "Layered staging, business-logic and reporting models",
+        "SQL logic tests and a GitHub Actions gate on every push"
+      ],
+      "technologies": [
+        "SQL",
+        "dbt",
+        "DuckDB",
+        "PostgreSQL",
+        "Python",
+        "Tableau"
+      ],
+      "links": {
+        "source": "https://github.com/LockNguyen/field-ops-sql-cost-audit"
+      },
+      "image": "assets/images/projects/field-ops-sql-cost-audit.svg",
+      "hero": {
+        "src": "assets/images/projects/field-ops-sql-cost-audit-hero.jpg",
+        "alt": "field-ops-sql-cost-audit — Concept render",
+        "caption": "Concept render"
+      }
+    },
+    {
+      "name": "ELT Pipeline: dbt + Snowflake + Airflow",
+      "category": "Data engineering",
+      "description": "An ELT pipeline that extracts data from the Reddit and OpenWeather APIs and a SaaS PostgreSQL database, then loads it raw into Snowflake. dbt transforms it with testing, documentation and lineage.",
+      "highlights": [
+        "dbt staging → intermediate → marts models with not_null, unique, accepted_values and freshness tests",
+        "Daily Apache Airflow DAG orchestrates async Python extractors with rate limiting",
+        "GitHub Actions runs dbt tests on PRs; Slack alerts on failures"
+      ],
+      "technologies": [
+        "Python",
+        "Snowflake",
+        "dbt",
+        "Apache Airflow",
+        "GitHub Actions",
+        "Docker"
+      ],
+      "links": {
+        "source": "https://github.com/LockNguyen/elt-pipeline-dbt-snowflake-airflow"
+      },
+      "image": "assets/images/projects/elt-pipeline-dbt-snowflake-airflow.svg",
+      "hero": {
+        "src": "assets/images/projects/elt-pipeline-dbt-snowflake-airflow-hero.jpg",
+        "alt": "ELT Pipeline: dbt + Snowflake + Airflow — Concept render",
+        "caption": "Concept render"
+      }
+    }
+  ]
+}

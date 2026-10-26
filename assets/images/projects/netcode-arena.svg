@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" font-family="IBM Plex Mono, SFMono-Regular, Consolas, monospace">
+<title>PN-07 netcode-arena schematic</title>
+<desc>Player input feeds client prediction, then a lossy network, then the authoritative server tick and a snapshot broadcast. Snapshots return through the network to client reconciliation and to the remote interpolation buffer. A shared C# simulation core is used by the client, the server and reconciliation. Key number: 2 players.</desc>
+<defs>
+<pattern id="mn" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#EAF3FB" stroke-opacity="0.05" stroke-width="1"/></pattern>
+<pattern id="mj" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#EAF3FB" stroke-opacity="0.09" stroke-width="1"/></pattern>
+<marker id="ak" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8z" fill="#9FDBFF"/></marker>
+<marker id="aw" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8z" fill="#EAF3FB" fill-opacity="0.8"/></marker>
+<style>
+.bx{fill:#0D3B66;stroke:#EAF3FB;stroke-opacity:0.7;stroke-width:1}
+.t{font-size:10px;letter-spacing:0.06em;fill:#EAF3FB}
+.s{font-size:9px;letter-spacing:0.06em;fill:#EAF3FB;fill-opacity:0.7}
+.k{fill:none;stroke:#9FDBFF;stroke-width:1}
+.d{fill:none;stroke:#EAF3FB;stroke-opacity:0.8;stroke-width:1;stroke-dasharray:3 3}
+</style>
+</defs>
+<rect width="640" height="360" fill="#0D3B66"/>
+<rect width="640" height="360" fill="url(#mn)"/>
+<rect width="640" height="360" fill="url(#mj)"/>
+
+<rect x="16" y="16" width="608" height="18" fill="#0D3B66" stroke="#EAF3FB" stroke-opacity="0.6"/>
+<text x="24" y="28" class="t">PN-07 · NETCODE-ARENA · PREDICT / RECONCILE / INTERPOLATE</text>
+<text x="616" y="28" class="s" text-anchor="end">SCHEMATIC</text>
+
+<rect class="bx" x="16" y="52" width="100" height="48"/>
+<text x="24" y="68" class="t">PLAYER INPUT</text>
+<text x="24" y="81" class="s">MOVE+AIM+FIRE</text>
+<text x="24" y="93" class="s">TICK T</text>
+
+<rect class="bx" x="143" y="52" width="100" height="48"/>
+<text x="151" y="68" class="t">PREDICTION</text>
+<text x="151" y="81" class="s">CLIENT SIDE</text>
+<text x="151" y="93" class="s">APPLY INPUT NOW</text>
+
+<rect class="bx" x="270" y="52" width="100" height="48" stroke-dasharray="4 2"/>
+<text x="278" y="68" class="t">NETWORK</text>
+<text x="278" y="81" class="s">LATENCY + LOSS</text>
+<text x="278" y="93" class="s">INJECTED</text>
+
+<rect class="bx" x="397" y="52" width="100" height="48"/>
+<text x="405" y="68" class="t">SERVER TICK</text>
+<text x="405" y="81" class="s">AUTHORITATIVE</text>
+<text x="405" y="93" class="s">HEADLESS UDP</text>
+
+<rect class="bx" x="524" y="52" width="100" height="48"/>
+<text x="532" y="68" class="t">SNAPSHOT</text>
+<text x="532" y="81" class="s">WORLD STATE</text>
+<text x="532" y="93" class="s">BROADCAST</text>
+
+<line class="k" x1="116" y1="76" x2="143" y2="76" marker-end="url(#ak)"/>
+<line class="k" x1="243" y1="76" x2="270" y2="76" marker-end="url(#ak)"/>
+<line class="k" x1="370" y1="76" x2="397" y2="76" marker-end="url(#ak)"/>
+<line class="k" x1="497" y1="76" x2="524" y2="76" marker-end="url(#ak)"/>
+
+<rect class="bx" x="143" y="128" width="354" height="32"/>
+<text x="320" y="142" class="t" text-anchor="middle">SHARED C# SIMULATION CORE</text>
+<text x="320" y="154" class="s" text-anchor="middle">ARENASIMULATION.STEP(STATE, INPUT)</text>
+
+<line class="d" x1="193" y1="100" x2="193" y2="128" marker-end="url(#aw)"/>
+<line class="d" x1="447" y1="100" x2="447" y2="128" marker-end="url(#aw)"/>
+<line class="d" x1="170" y1="196" x2="170" y2="160" marker-end="url(#aw)"/>
+<text x="280" y="183" class="s">SAME (STATE, INPUT) = SAME OUTPUT</text>
+
+<rect class="bx" x="16" y="196" width="100" height="48" stroke="#9FDBFF" stroke-opacity="0.9"/>
+<text x="24" y="212" class="s">KEY NUMBER</text>
+<text x="24" y="232" font-size="11" letter-spacing="0.06em" fill="#9FDBFF">2 PLAYERS</text>
+
+<rect class="bx" x="143" y="196" width="120" height="48"/>
+<text x="151" y="212" class="t">RECONCILIATION</text>
+<text x="151" y="225" class="s">SNAP TO SERVER</text>
+<text x="151" y="237" class="s">REPLAY UN-ACKED</text>
+
+<rect class="bx" x="397" y="196" width="120" height="48"/>
+<text x="405" y="212" class="t">INTERPOLATION</text>
+<text x="405" y="225" class="s">BUFFER · REMOTE</text>
+<text x="405" y="237" class="s">SAMPLE NOW-DELAY</text>
+
+<polyline class="k" points="574,100 574,270 203,270 203,244" marker-end="url(#ak)"/>
+<line class="k" x1="457" y1="270" x2="457" y2="244" marker-end="url(#ak)"/>
+<text x="220" y="285" class="s">SNAPSHOTS RETURN OVER THE SAME LOSSY LINK</text>
+
+<line class="k" x1="16" y1="326" x2="40" y2="326"/>
+<text x="46" y="329" class="s">KEY PATH</text>
+<line class="d" x1="130" y1="326" x2="154" y2="326"/>
+<text x="160" y="329" class="s">CALLS SHARED STEP()</text>
+</svg>

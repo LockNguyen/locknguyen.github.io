@@ -1,0 +1,69 @@
+{
+  "groups": [
+    {
+      "name": "Languages",
+      "items": [
+        "C#",
+        "Python",
+        "SQL",
+        "TypeScript",
+        "JavaScript",
+        "C++",
+        "HTML/CSS",
+        "Java (learning)"
+      ]
+    },
+    {
+      "name": "Backend",
+      "items": [
+        ".NET 9",
+        "ASP.NET Core",
+        "Entity Framework Core",
+        "SQL Server",
+        "PostgreSQL",
+        "FastAPI",
+        "REST APIs"
+      ]
+    },
+    {
+      "name": "AI",
+      "items": [
+        "Claude Code",
+        "LLM APIs (multi-provider)",
+        "RAG",
+        "pgvector",
+        "PyTorch",
+        "Detectron2"
+      ]
+    },
+    {
+      "name": "Cloud & DevOps",
+      "items": [
+        "Azure DevOps (Git, CI/CD, Boards)",
+        "Docker",
+        "Supabase",
+        "OpenTelemetry",
+        "Jaeger"
+      ]
+    },
+    {
+      "name": "Frontend",
+      "items": [
+        "Vue 3",
+        "React",
+        "Next.js"
+      ]
+    },
+    {
+      "name": "Testing",
+      "items": [
+        "NUnit",
+        "Vitest",
+        "Selenium",
+        "pytest",
+        "Test case authoring",
+        "SQL testing"
+      ]
+    }
+  ]
+}

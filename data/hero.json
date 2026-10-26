@@ -1,0 +1,50 @@
+{
+  "name": "Loc Nguyen",
+  "title": "Software Engineer: Full Stack .NET, Vue & Applied AI",
+  "summary": "I'm a software engineer and 2026 graduate who works directly with non-technical stakeholders, such as product owners, business analysts and biology researchers, and turns their problems into shipped production systems. I have 2+ years of experience building an enterprise Vue / C# .NET / SQL Server platform used in 100+ countries. I've also delivered custom integrations, data migrations and deployed AI features.",
+  "photo": {
+    "src": "assets/images/loc-nguyen.jpg",
+    "alt": "Portrait of Loc Nguyen"
+  },
+  "readouts": [
+    {
+      "value": "20x",
+      "label": "faster Planning dashboard data load at OneHope"
+    },
+    {
+      "value": "99.9%",
+      "label": "AI microservice uptime during LLM outages"
+    },
+    {
+      "value": "150,000",
+      "label": "asset relationships restored via Python ETL"
+    },
+    {
+      "value": "100+",
+      "label": "countries served by the OneHope platform"
+    }
+  ],
+  "ctas": [
+    {
+      "label": "View projects",
+      "href": "#projects",
+      "kind": "primary"
+    },
+    {
+      "label": "Resume",
+      "href": "assets/files/loc-nguyen-resume.pdf",
+      "kind": "resume"
+    },
+    {
+      "label": "Get in touch",
+      "href": "#contact",
+      "kind": "secondary"
+    }
+  ],
+  "social": {
+    "github": "https://github.com/LockNguyen",
+    "linkedin": "https://linkedin.com/in/lock-nguyen",
+    "website": "https://loc-nguyen.netlify.app",
+    "email": "loc.software.dev@gmail.com"
+  }
+}

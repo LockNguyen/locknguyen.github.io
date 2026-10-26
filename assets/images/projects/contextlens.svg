@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" role="img">
+<title>PN-05 ContextLens architecture</title>
+<desc>VS Code hover and CodeLens providers query a git blame parser backed by a SQLite cache. A background indexer drives a rate-limit-aware GitHub client, whose results pass through a comment-ranking heuristic into the cache and then to the hover card. Top 3 ranked comments are shown.</desc>
+<defs>
+<pattern id="mn" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0V16H0" fill="none" stroke="#EAF3FB" stroke-opacity="0.05" stroke-width="1"/></pattern>
+<pattern id="mj" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0V80H0" fill="none" stroke="#EAF3FB" stroke-opacity="0.09" stroke-width="1"/></pattern>
+<marker id="ar" viewBox="0 0 8 6" refX="8" refY="3" markerWidth="8" markerHeight="6" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0 0L8 3L0 6z" fill="#EAF3FB" fill-opacity="0.8"/></marker>
+<marker id="ac" viewBox="0 0 8 6" refX="8" refY="3" markerWidth="8" markerHeight="6" markerUnits="userSpaceOnUse" orient="auto"><path d="M0 0L8 3L0 6z" fill="#9FDBFF"/></marker>
+<style>
+text{font-family:"IBM Plex Mono",SFMono-Regular,Consolas,monospace;letter-spacing:0.06em;text-transform:uppercase;fill:#EAF3FB;font-size:10px}
+.s{font-size:9px;fill-opacity:0.7}
+.a{fill:#9FDBFF}
+.bx{fill:#0D3B66;stroke:#EAF3FB;stroke-opacity:0.8;stroke-width:1}
+.gp{fill:none;stroke:#EAF3FB;stroke-opacity:0.4;stroke-width:1;stroke-dasharray:4 3}
+.ln{fill:none;stroke:#EAF3FB;stroke-opacity:0.8;stroke-width:1}
+.kp{fill:none;stroke:#9FDBFF;stroke-width:1}
+</style>
+</defs>
+<rect x="0" y="0" width="640" height="360" fill="#0D3B66"/>
+<rect x="0" y="0" width="640" height="360" fill="url(#mn)"/>
+<rect x="0" y="0" width="640" height="360" fill="url(#mj)"/>
+
+<rect x="16" y="16" width="608" height="20" fill="#0D3B66" stroke="#EAF3FB" stroke-opacity="0.6"/>
+<text x="24" y="30">PN-05 · ContextLens · PR context in the editor hover</text>
+
+<rect class="gp" x="16" y="52" width="160" height="138"/>
+<text class="s" x="24" y="63">VS Code editor</text>
+<rect class="gp" x="216" y="52" width="208" height="138"/>
+<text class="s" x="224" y="63">Local core (offline)</text>
+<rect class="gp" x="188" y="216" width="336" height="88"/>
+<text class="s" x="196" y="228">GitHub sync</text>
+
+<rect class="bx" x="28" y="72" width="136" height="40"/>
+<text x="38" y="90">Hover provider</text>
+<text class="s" x="38" y="103">Line hover</text>
+<rect class="bx" x="28" y="130" width="136" height="40"/>
+<text x="38" y="148">CodeLens provider</text>
+<text class="s" x="38" y="161">Fn / class lens</text>
+
+<rect class="bx" x="228" y="72" width="184" height="50"/>
+<text x="238" y="94">Git blame parser</text>
+<text class="s" x="238" y="108">Line-porcelain chain</text>
+<rect class="bx" x="228" y="140" width="184" height="40"/>
+<text x="238" y="157">SQLite cache</text>
+<text class="s" x="238" y="170">PRs + comments</text>
+
+<rect class="bx" x="16" y="240" width="140" height="48"/>
+<text class="a" x="26" y="260">Background indexer</text>
+<text class="s" x="26" y="275">Repo-open pass</text>
+<rect class="bx" x="196" y="240" width="140" height="48"/>
+<text class="a" x="206" y="260">GitHub API client</text>
+<text class="s" x="206" y="275">Rate-limit-aware</text>
+<rect class="bx" x="376" y="240" width="140" height="48"/>
+<text class="a" x="386" y="260">Comment ranking</text>
+<text class="s" x="386" y="275">Explanatory heuristic</text>
+
+<rect class="bx" x="468" y="72" width="156" height="108"/>
+<text class="a" x="478" y="90">Hover card / gutter</text>
+<line x1="478" y1="98" x2="614" y2="98" stroke="#EAF3FB" stroke-opacity="0.4"/>
+<text class="s" x="478" y="114">Author · commit</text>
+<text class="s" x="478" y="130">PR description</text>
+<text class="s" x="478" y="146">Ranked comments</text>
+<text class="s" x="478" y="166">Cache-first, instant</text>
+
+<rect class="bx" x="548" y="240" width="76" height="48"/>
+<text class="s" x="556" y="253">Top ranked</text>
+<text class="s" x="556" y="264">comments</text>
+<text class="a" x="556" y="281" style="font-size:11px">N = 3</text>
+
+<path class="ln" d="M164 84H228" marker-end="url(#ar)"/>
+<path class="ln" d="M164 144H184V98H228" marker-end="url(#ar)"/>
+<path class="ln" d="M136 240V204H198V110H228" marker-end="url(#ar)"/>
+<path class="ln" d="M320 122V140" marker-start="url(#ar)" marker-end="url(#ar)"/>
+<path class="kp" d="M156 264H196" marker-end="url(#ac)"/>
+<path class="kp" d="M336 264H376" marker-end="url(#ac)"/>
+<path class="kp" d="M446 240V204H380V180" marker-end="url(#ac)"/>
+<path class="kp" d="M412 160H468" marker-end="url(#ac)"/>
+<path class="ln" d="M516 264H548" stroke-dasharray="3 2"/>
+
+<text class="s" x="16" y="334">Local core answers offline; background sync fills the cache</text>
+<line x1="470" y1="331" x2="494" y2="331" stroke="#9FDBFF" stroke-width="1"/>
+<text class="a s" x="502" y="334" style="fill-opacity:1">Key path</text>
+</svg>

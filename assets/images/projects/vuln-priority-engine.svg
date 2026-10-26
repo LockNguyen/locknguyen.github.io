@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" role="img" aria-labelledby="t d">
+<title id="t">PN-06 vuln-priority-engine pipeline schematic</title>
+<desc id="d">Scanner adapters feed CVE normalization, then enrichment with EPSS, CISA KEV and asset criticality, then a configurable risk-scoring engine, then a prioritized remediation queue with SLA buckets. The suite has 68 tests.</desc>
+<defs>
+<style>
+.t{font-family:"IBM Plex Mono",SFMono-Regular,Consolas,monospace;font-size:9px;letter-spacing:0.06em;fill:#EAF3FB;text-anchor:middle}
+.s{fill-opacity:0.7}
+.l{text-anchor:start}
+.a{fill:#9FDBFF}
+.h{font-size:10px}
+.v{font-size:11px;font-weight:bold}
+.b{fill:#0D3B66;stroke:#EAF3FB;stroke-opacity:0.6;stroke-width:1}
+.k{fill:#0D3B66;stroke:#9FDBFF;stroke-width:1}
+.w{fill:none;stroke:#EAF3FB;stroke-opacity:0.6;stroke-width:1}
+.p{fill:none;stroke:#9FDBFF;stroke-width:1}
+</style>
+<pattern id="mn" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#EAF3FB" stroke-opacity="0.05" stroke-width="1"/></pattern>
+<pattern id="mj" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#EAF3FB" stroke-opacity="0.09" stroke-width="1"/></pattern>
+<marker id="ma" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8z" fill="#9FDBFF"/></marker>
+<marker id="ms" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8z" fill="#EAF3FB" fill-opacity="0.7"/></marker>
+</defs>
+<rect width="640" height="360" fill="#0D3B66"/>
+<rect width="640" height="360" fill="url(#mn)"/>
+<rect width="640" height="360" fill="url(#mj)"/>
+
+<rect x="16" y="16" width="608" height="22" class="b"/>
+<text x="24" y="31" class="t l h">PN-06 · VULN-PRIORITY-ENGINE · CVE TRIAGE PIPELINE</text>
+<text x="616" y="31" class="t s" style="text-anchor:end">SCHEMATIC</text>
+
+<text x="16" y="64" class="t s l">01 INGEST</text>
+<text x="142" y="64" class="t s l">02 NORMALIZE</text>
+<text x="268" y="64" class="t s l">03 ENRICH</text>
+<text x="394" y="64" class="t s l">04 SCORE</text>
+<text x="520" y="64" class="t s l">05 PRIORITIZE</text>
+
+<rect x="16" y="72" width="104" height="60" class="k"/>
+<rect x="142" y="72" width="104" height="60" class="k"/>
+<rect x="268" y="72" width="104" height="60" class="k"/>
+<rect x="394" y="72" width="104" height="60" class="k"/>
+<rect x="520" y="72" width="104" height="60" class="k"/>
+
+<text x="68" y="99" class="t">SCANNER</text>
+<text x="68" y="111" class="t">ADAPTERS</text>
+<text x="194" y="99" class="t">CVE</text>
+<text x="194" y="111" class="t">NORMALIZATION</text>
+<text x="320" y="105" class="t">ENRICHMENT</text>
+<text x="446" y="99" class="t">RISK SCORING</text>
+<text x="446" y="111" class="t">ENGINE</text>
+<text x="572" y="93" class="t">PRIORITIZED</text>
+<text x="572" y="105" class="t">REMEDIATION</text>
+<text x="572" y="117" class="t">QUEUE</text>
+
+<line x1="120" y1="102" x2="141" y2="102" class="p" marker-end="url(#ma)"/>
+<line x1="246" y1="102" x2="267" y2="102" class="p" marker-end="url(#ma)"/>
+<line x1="372" y1="102" x2="393" y2="102" class="p" marker-end="url(#ma)"/>
+<line x1="498" y1="102" x2="519" y2="102" class="p" marker-end="url(#ma)"/>
+
+<line x1="68" y1="156" x2="68" y2="133" class="w" marker-end="url(#ms)"/>
+<rect x="16" y="156" width="104" height="22" class="b"/>
+<rect x="16" y="184" width="104" height="22" class="b"/>
+<text x="68" y="170" class="t s">TRIVY JSON</text>
+<text x="68" y="198" class="t s">CSV</text>
+
+<line x1="320" y1="156" x2="320" y2="133" class="w" marker-end="url(#ms)"/>
+<rect x="256" y="156" width="128" height="22" class="b"/>
+<rect x="256" y="184" width="128" height="22" class="b"/>
+<rect x="256" y="212" width="128" height="22" class="b"/>
+<text x="320" y="170" class="t s">EPSS</text>
+<text x="320" y="198" class="t s">CISA KEV</text>
+<text x="320" y="226" class="t s">ASSET CRITICALITY</text>
+
+<line x1="446" y1="156" x2="446" y2="133" class="w" marker-end="url(#ms)"/>
+<rect x="394" y="156" width="104" height="32" class="b"/>
+<text x="446" y="169" class="t s">CONFIGURABLE</text>
+<text x="446" y="181" class="t s">RISK MODEL</text>
+
+<line x1="572" y1="133" x2="572" y2="155" class="w" marker-end="url(#ms)"/>
+<rect x="520" y="156" width="104" height="22" class="b"/>
+<text x="572" y="170" class="t s">SLA BUCKETS</text>
+
+<line x1="16" y1="262" x2="215" y2="262" class="w"/>
+<line x1="425" y1="262" x2="624" y2="262" class="w"/>
+<line x1="16" y1="257" x2="16" y2="267" class="w"/>
+<line x1="624" y1="257" x2="624" y2="267" class="w"/>
+<text x="320" y="265" class="t s">FLAT CVE DUMP → RANKED SLA QUEUE</text>
+
+<text x="16" y="308" class="t s l">OFFLINE · BUNDLED FIXTURES</text>
+<text x="16" y="320" class="t s l">NO API KEYS · PYTHON 3.11+</text>
+
+<rect x="520" y="296" width="104" height="32" class="k"/>
+<text x="572" y="308" class="t s">TEST SUITE</text>
+<text x="572" y="321" class="t a v">68 TESTS</text>
+</svg>

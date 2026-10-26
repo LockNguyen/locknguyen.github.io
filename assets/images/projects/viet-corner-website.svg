@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" role="img" aria-labelledby="ti de">
+<title id="ti">PN-01 Viet Corner Website schematic</title>
+<desc id="de">Next.js public site and admin dashboard share a Firestore database through real-time listeners. Firestore nests courses, locations and classes. A Firebase Auth admin check guards writes, Firebase Storage holds the image gallery, and an EN/VI translation context wraps both front ends.</desc>
+<defs>
+<style>
+text{font-family:"IBM Plex Mono",SFMono-Regular,Consolas,monospace;font-size:9px;letter-spacing:.06em;fill:#EAF3FB}
+.h{font-size:10px}
+.s{opacity:.7}
+.a{fill:#9FDBFF}
+.b{fill:none;stroke:#EAF3FB;stroke-opacity:.7;stroke-width:1}
+.k{fill:none;stroke:#9FDBFF;stroke-width:1}
+.d{stroke-dasharray:4 3}
+.m{text-anchor:middle}
+</style>
+<pattern id="g1" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#EAF3FB" stroke-opacity=".05" stroke-width="1"/></pattern>
+<pattern id="g2" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#EAF3FB" stroke-opacity=".09" stroke-width="1"/></pattern>
+<marker id="ar" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8z" fill="#EAF3FB" fill-opacity=".8"/></marker>
+<marker id="ac" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8z" fill="#9FDBFF"/></marker>
+</defs>
+<rect width="640" height="360" fill="#0D3B66"/>
+<rect width="640" height="360" fill="url(#g1)"/>
+<rect width="640" height="360" fill="url(#g2)"/>
+
+<rect class="b" x="16" y="16" width="608" height="20"/>
+<text class="h" x="24" y="30">PN-01 · VIET CORNER WEBSITE · NEXT.JS + FIREBASE SCHEMATIC</text>
+
+<rect class="b d" x="16" y="44" width="168" height="262"/>
+<text class="s" x="28" y="58">I18N CONTEXT · EN/VI</text>
+
+<rect class="b" x="28" y="74" width="144" height="70"/>
+<text class="h" x="100" y="100" style="text-anchor:middle">PUBLIC SITE</text>
+<text class="m" x="100" y="114">NEXT.JS APP ROUTER</text>
+<text class="m s" x="100" y="128">EVENTS · COURSES</text>
+
+<rect class="b" x="28" y="170" width="144" height="70"/>
+<text class="h m" x="100" y="196">ADMIN DASHBOARD</text>
+<text class="m" x="100" y="210">NEXT.JS · CRUD</text>
+<text class="m s" x="100" y="224">AUTHGUARD ROUTES</text>
+
+<rect class="k" x="56" y="252" width="44" height="18"/>
+<rect class="b" x="100" y="252" width="44" height="18"/>
+<text class="m a" x="78" y="264">EN</text>
+<text class="m" x="122" y="264">VI</text>
+<text class="m s" x="100" y="292">T(KEY) → EN | VI</text>
+
+<rect class="b" x="216" y="50" width="112" height="34"/>
+<text class="m s" x="272" y="63">COMPONENTS</text>
+<text class="h m a" x="272" y="77">50+</text>
+<rect class="b" x="216" y="124" width="112" height="34"/>
+<text class="m s" x="272" y="137">NESTING</text>
+<text class="h m a" x="272" y="151">3 LEVELS</text>
+
+<rect class="k" x="216" y="198" width="112" height="48"/>
+<text class="h m" x="272" y="212">FIREBASE AUTH</text>
+<text class="m" x="272" y="224">ADMIN CHECK</text>
+<text class="m s" x="272" y="236">GUARDS WRITES</text>
+
+<rect class="b" x="352" y="44" width="272" height="196"/>
+<text class="h" x="362" y="57">FIRESTORE</text>
+<rect class="b" x="362" y="66" width="252" height="166"/>
+<text x="370" y="79">L1 COURSES</text>
+<rect class="b" x="372" y="88" width="232" height="134"/>
+<text x="380" y="101">L2 LOCATIONS</text>
+<rect class="k" x="382" y="110" width="212" height="102"/>
+<text class="a" x="390" y="123">L3 CLASSES</text>
+<text x="390" y="147">DISCIPLESHIPCLASSES/{ID}</text>
+<text class="s" x="390" y="162">LAZY LOAD ON EXPAND</text>
+<text class="s" x="390" y="176">CASCADE DELETE W/ WARNING</text>
+<text class="s" x="390" y="190">NO ORPHANED DATA</text>
+
+<rect class="b" x="352" y="262" width="272" height="44"/>
+<text class="h m" x="488" y="280">FIREBASE STORAGE</text>
+<text class="m s" x="488" y="294">IMAGE GALLERY · UPLOAD ONCE, REUSE</text>
+
+<line class="b" x1="172" y1="109" x2="351" y2="109" marker-end="url(#ar)"/>
+<text class="m s" x="262" y="103">ONSNAPSHOT LISTENERS</text>
+<line class="b" x1="352" y1="185" x2="173" y2="185" marker-end="url(#ar)"/>
+<text class="m s" x="262" y="179">LIVE LISTENERS</text>
+<line class="k" x1="172" y1="222" x2="215" y2="222" marker-end="url(#ac)"/>
+<line class="k" x1="328" y1="222" x2="351" y2="222" marker-end="url(#ac)"/>
+<polyline class="b" points="160,240 160,284 351,284" marker-end="url(#ar)"/>
+<text class="s" x="200" y="278">UPLOAD</text>
+<line class="b d" x1="488" y1="262" x2="488" y2="241" marker-end="url(#ar)"/>
+</svg>

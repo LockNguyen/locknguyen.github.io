@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+<title>PN-03 · YouTube Jam · synced queue session</title>
+<desc>Guest devices add songs to a shared session queue that syncs with a host screen playing YouTube. A thin Vue 3 client layer sits beneath host and guests.</desc>
+<defs>
+<style>
+text{font-family:"IBM Plex Mono",SFMono-Regular,Consolas,monospace;font-size:9px;letter-spacing:0.06em;text-transform:uppercase;fill:#EAF3FB}
+.s{opacity:0.7}
+.a{fill:#9FDBFF}
+.b{fill:none;stroke:#EAF3FB;stroke-opacity:0.6;stroke-width:1}
+.d{fill:none;stroke:#EAF3FB;stroke-opacity:0.45;stroke-width:1;stroke-dasharray:4 3}
+.k{fill:none;stroke:#9FDBFF;stroke-width:1}
+.f{fill:#EAF3FB;fill-opacity:0.06;stroke:#EAF3FB;stroke-opacity:0.6;stroke-width:1}
+</style>
+<pattern id="m" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#EAF3FB" stroke-opacity="0.05" stroke-width="1"/></pattern>
+<pattern id="M" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#EAF3FB" stroke-opacity="0.09" stroke-width="1"/></pattern>
+<marker id="ar" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8z" fill="#EAF3FB" fill-opacity="0.8"/></marker>
+<marker id="ac" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8z" fill="#9FDBFF"/></marker>
+</defs>
+<rect width="640" height="360" fill="#0D3B66"/>
+<rect width="640" height="360" fill="url(#m)"/>
+<rect width="640" height="360" fill="url(#M)"/>
+
+<rect x="16" y="16" width="608" height="20" class="b"/>
+<text x="24" y="29">PN-03 · YOUTUBE JAM · SYNCED QUEUE SESSION</text>
+
+<rect x="16" y="52" width="150" height="180" class="d"/>
+<text x="24" y="66" class="s">GUEST DEVICES</text>
+<rect x="28" y="80" width="126" height="40" class="f"/>
+<text x="36" y="97">GUEST A</text>
+<text x="36" y="111" class="s">SEARCH + ADD</text>
+<rect x="28" y="128" width="126" height="40" class="f"/>
+<text x="36" y="145">GUEST B</text>
+<text x="36" y="159" class="s">SEARCH + ADD</text>
+<rect x="28" y="176" width="126" height="40" class="f"/>
+<text x="36" y="193">GUEST C</text>
+<text x="36" y="207" class="s">SEARCH + ADD</text>
+
+<rect x="245" y="84" width="150" height="120" class="b"/>
+<text x="253" y="98" class="a">SHARED SESSION</text>
+<rect x="257" y="108" width="126" height="20" class="k"/>
+<text x="265" y="121" class="a">NOW PLAYING</text>
+<rect x="257" y="134" width="126" height="20" class="f"/>
+<text x="265" y="147">NEXT SONG</text>
+<rect x="257" y="160" width="126" height="20" class="f"/>
+<text x="265" y="173">NEXT SONG</text>
+<text x="253" y="196" class="s">SHARED QUEUE</text>
+
+<rect x="474" y="52" width="150" height="180" class="d"/>
+<text x="482" y="66" class="s">HOST SCREEN</text>
+<rect x="486" y="76" width="126" height="72" class="f"/>
+<polygon points="536,96 536,120 558,108" class="k"/>
+<text x="486" y="162">YOUTUBE PLAYER</text>
+<rect x="486" y="172" width="126" height="44" class="f"/>
+<text x="494" y="190">QUEUE VIEW</text>
+<text x="494" y="204" class="s">UP NEXT LIST</text>
+
+<polyline points="166,130 243,130" class="k" marker-end="url(#ac)"/>
+<text x="205" y="123" text-anchor="middle" class="a">ADD SONG</text>
+<polyline points="395,130 472,130" class="k" marker-end="url(#ac)"/>
+<text x="434" y="123" text-anchor="middle" class="a">SYNC</text>
+<polyline points="474,172 397,172" class="b" marker-end="url(#ar)"/>
+<text x="434" y="188" text-anchor="middle" class="s">PLAYBACK</text>
+<polyline points="243,172 168,172" class="b" marker-end="url(#ar)"/>
+<text x="205" y="188" text-anchor="middle" class="s">QUEUE</text>
+
+<line x1="91" y1="232" x2="91" y2="262" class="b"/>
+<line x1="320" y1="204" x2="320" y2="262" class="b"/>
+<line x1="549" y1="232" x2="549" y2="262" class="b"/>
+
+<rect x="16" y="262" width="608" height="44" class="d"/>
+<text x="24" y="287" class="a">VUE 3 CLIENT LAYER · THIN</text>
+<rect x="200" y="272" width="120" height="24" class="f"/>
+<text x="260" y="287" text-anchor="middle">UI VIEWS</text>
+<rect x="332" y="272" width="120" height="24" class="f"/>
+<text x="392" y="287" text-anchor="middle">QUEUE STORE</text>
+<rect x="464" y="272" width="152" height="24" class="k"/>
+<text x="540" y="287" text-anchor="middle" class="a">SYNC CLIENT</text>
+
+<rect x="16" y="318" width="170" height="22" class="k"/>
+<text x="24" y="332">FRAMEWORK</text>
+<text x="178" y="332" text-anchor="end" class="a">VUE 3</text>
+<rect x="200" y="318" width="150" height="22" class="k"/>
+<text x="208" y="332">HOST SCREENS</text>
+<text x="342" y="332" text-anchor="end" class="a">1</text>
+<text x="624" y="332" text-anchor="end" class="s">SCHEMATIC · NOT TO SCALE</text>
+</svg>

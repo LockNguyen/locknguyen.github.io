@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" font-family="IBM Plex Mono, SFMono-Regular, Consolas, monospace">
+<title>PN-08 field-ops-sql-cost-audit architecture</title>
+<desc>Blueprint: messy operational tables flow into dbt staging views, then a business-logic CTE layer, then tested reporting views, then Tableau dashboards. dbt tests and a GitHub Actions gate validate the reporting views.</desc>
+<defs>
+<pattern id="gm" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#EAF3FB" stroke-opacity="0.05" stroke-width="1"/></pattern>
+<pattern id="gM" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#EAF3FB" stroke-opacity="0.09" stroke-width="1"/></pattern>
+<marker id="ar" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#9FDBFF"/></marker>
+<marker id="ad" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#EAF3FB" fill-opacity="0.8"/></marker>
+<style>
+text{font-size:9px;letter-spacing:0.06em;fill:#EAF3FB;text-transform:uppercase}
+.c{text-anchor:middle}
+.s{fill-opacity:0.7}
+.h{font-size:10px}
+.a{fill:#9FDBFF}
+.b{fill:none;stroke:#EAF3FB;stroke-opacity:0.7;stroke-width:1}
+.k{fill:none;stroke:#9FDBFF;stroke-width:1}
+.d{stroke:#EAF3FB;stroke-opacity:0.5;stroke-width:1}
+</style>
+</defs>
+<rect width="640" height="360" fill="#0D3B66"/>
+<rect width="640" height="360" fill="url(#gm)"/>
+<rect width="640" height="360" fill="url(#gM)"/>
+
+<rect class="b" x="16" y="16" width="608" height="20"/>
+<text class="h" x="24" y="30">PN-08 · FIELD-OPS-SQL-COST-AUDIT · MESSY OPS TABLES TO TESTED COST-TO-SERVE VIEWS</text>
+
+<path class="d" d="M138 82V75H498V82" fill="none"/>
+<text class="c s" x="318" y="68">DBT PROJECT · STAGING → LOGIC → REPORTING</text>
+
+<rect class="b" x="16" y="88" width="100" height="136"/>
+<text class="a" x="22" y="101">01</text>
+<text class="c h" x="66" y="118">MESSY OPS</text>
+<text class="c h" x="66" y="130">TABLES</text>
+<line class="d" x1="24" y1="138" x2="108" y2="138"/>
+<text class="c s" x="66" y="154">DISPATCH</text>
+<text class="c s" x="66" y="170">ROUTES</text>
+<text class="c s" x="66" y="186">TIMESHEETS</text>
+<text class="c s" x="66" y="202">FUEL</text>
+
+<rect class="b" x="138" y="88" width="92" height="136"/>
+<text class="a" x="144" y="101">02</text>
+<text class="c h" x="184" y="118">DBT</text>
+<text class="c h" x="184" y="130">STAGING VIEWS</text>
+<line class="d" x1="146" y1="138" x2="222" y2="138"/>
+<text class="c s" x="184" y="154">CLEANS RAW</text>
+<text class="c s" x="184" y="166">TABLES</text>
+
+<rect class="k" x="252" y="88" width="124" height="136"/>
+<text class="a" x="258" y="101">03</text>
+<text class="c h" x="314" y="118">BUSINESS LOGIC</text>
+<text class="c h" x="314" y="130">CTE LAYER</text>
+<line class="d" x1="260" y1="138" x2="368" y2="138"/>
+<text class="c s" x="314" y="154">COST-TO-SERVE</text>
+<text class="c s" x="314" y="174">RECURSIVE ROUTE</text>
+<text class="c s" x="314" y="186">SEQUENCING</text>
+<text class="c s" x="314" y="204">UTILIZATION</text>
+<text class="c s" x="314" y="216">WINDOWS</text>
+
+<rect class="k" x="398" y="88" width="100" height="136"/>
+<text class="a" x="404" y="101">04</text>
+<text class="c h" x="448" y="118">TESTED</text>
+<text class="c h" x="448" y="130">REPORTING VIEWS</text>
+<line class="d" x1="406" y1="138" x2="490" y2="138"/>
+<text class="c s" x="448" y="154">ANALYSIS-READY</text>
+<text class="c s" x="448" y="166">VIEWS</text>
+
+<rect class="b" x="520" y="88" width="104" height="136"/>
+<text class="a" x="526" y="101">05</text>
+<text class="c h" x="572" y="118">TABLEAU</text>
+<text class="c h" x="572" y="130">DASHBOARDS</text>
+<line class="d" x1="528" y1="138" x2="616" y2="138"/>
+<text class="c s" x="572" y="154">COST-TO-SERVE</text>
+<text class="c s" x="572" y="166">EXPLORER</text>
+<text class="c s" x="572" y="186">SLA-BREACH</text>
+<text class="c s" x="572" y="198">HEATMAP</text>
+
+<g stroke="#9FDBFF" stroke-width="1.2" fill="none" marker-end="url(#ar)">
+<line x1="118" y1="156" x2="136" y2="156"/>
+<line x1="232" y1="156" x2="250" y2="156"/>
+<line x1="378" y1="156" x2="396" y2="156"/>
+<line x1="500" y1="156" x2="518" y2="156"/>
+</g>
+
+<rect class="b" x="336" y="262" width="288" height="40"/>
+<text class="c h" x="480" y="279">DBT TESTS + GITHUB ACTIONS GATE</text>
+<text class="c s" x="480" y="293">FAILS LOUDLY ON SCHEMA CHANGE</text>
+<line x1="448" y1="262" x2="448" y2="227" stroke="#EAF3FB" stroke-opacity="0.8" stroke-dasharray="4 3" marker-end="url(#ad)"/>
+<text class="s" x="454" y="248">VALIDATES</text>
+
+<rect class="b" x="16" y="262" width="96" height="40"/>
+<text class="s" x="24" y="276">RAW TABLES</text>
+<text class="a h" x="24" y="294">4</text>
+<rect class="b" x="120" y="262" width="96" height="40"/>
+<text class="s" x="128" y="276">LOGIC BLOCKS</text>
+<text class="a h" x="128" y="294">3</text>
+<rect class="b" x="224" y="262" width="96" height="40"/>
+<text class="s" x="232" y="276">CI GATE</text>
+<text class="a h" x="232" y="294">1</text>
+
+<line x1="16" y1="332" x2="40" y2="332" stroke="#9FDBFF" stroke-width="1.2"/>
+<text class="s" x="46" y="335">DATA FLOW</text>
+<line x1="130" y1="332" x2="154" y2="332" stroke="#EAF3FB" stroke-opacity="0.8" stroke-dasharray="4 3"/>
+<text class="s" x="160" y="335">VALIDATION</text>
+</svg>

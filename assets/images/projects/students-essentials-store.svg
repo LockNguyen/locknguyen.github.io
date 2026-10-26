@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+<title>PN-02 LU Essentials Store: draft-commit data flow</title>
+<desc>Vue 3 UI reads a filtered list from a pure function fed by the filters and products Pinia stores. Edits are staged in a local draft and committed in bulk to a mock async database. A persistence plugin writes to localStorage. 10 changes become 1 API call.</desc>
+<defs>
+<pattern id="mn" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#EAF3FB" stroke-opacity="0.05" stroke-width="1"/></pattern>
+<pattern id="mj" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#EAF3FB" stroke-opacity="0.09" stroke-width="1"/></pattern>
+<marker id="ar" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8z" fill="#EAF3FB" fill-opacity="0.8"/></marker>
+<marker id="ac" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8z" fill="#9FDBFF"/></marker>
+<style>
+text{font-family:"IBM Plex Mono",SFMono-Regular,Consolas,monospace;letter-spacing:0.06em;fill:#EAF3FB;text-transform:uppercase}
+.h{font-size:10px}
+.s{font-size:9px;fill-opacity:0.7}
+.k{fill:#9FDBFF}
+.b{fill:none;stroke:#EAF3FB;stroke-opacity:0.7;stroke-width:1}
+.i{fill:none;stroke:#EAF3FB;stroke-opacity:0.4;stroke-width:1}
+.l{fill:none;stroke:#EAF3FB;stroke-opacity:0.7;stroke-width:1}
+.d{stroke-dasharray:4 3}
+.a{fill:none;stroke:#9FDBFF;stroke-width:1}
+</style>
+</defs>
+<rect width="640" height="360" fill="#0D3B66"/>
+<rect width="640" height="360" fill="url(#mn)"/>
+<rect width="640" height="360" fill="url(#mj)"/>
+
+<rect class="b" x="16" y="16" width="608" height="20"/>
+<text class="h" x="24" y="29.5">PN-02 · LU ESSENTIALS STORE · DRAFT → COMMIT DATA FLOW</text>
+
+<rect class="b" x="16" y="52" width="120" height="242"/>
+<text class="h" x="76" y="108" text-anchor="middle">VUE 3 UI</text>
+<text class="s" x="76" y="122" text-anchor="middle">COMPOSITION API</text>
+<rect class="i" x="26" y="64" width="100" height="26"/>
+<text class="s" x="76" y="80" text-anchor="middle">FILTER BAR</text>
+<rect class="i" x="26" y="150" width="100" height="30"/>
+<text class="s" x="76" y="168" text-anchor="middle">PRODUCT TABLE</text>
+<rect class="i" x="26" y="257" width="100" height="26"/>
+<text class="s" x="76" y="273" text-anchor="middle">SUBMIT BAR</text>
+
+<rect class="b" x="190" y="52" width="180" height="50"/>
+<text class="h" x="280" y="73" text-anchor="middle">FILTERS STORE</text>
+<text class="s" x="280" y="89" text-anchor="middle">PINIA · NAME/CAT/STOCK/SORT</text>
+
+<rect class="b" x="190" y="140" width="180" height="50"/>
+<text class="h" x="280" y="161" text-anchor="middle" style="text-transform:none">getFilteredProductList()</text>
+<text class="s" x="280" y="177" text-anchor="middle">PURE FN · NO SIDE EFFECTS</text>
+
+<rect class="b" x="190" y="220" width="180" height="80"/>
+<text class="h" x="280" y="236" text-anchor="middle">PRODUCTS STORE · PINIA</text>
+<rect class="a d" x="202" y="248" width="156" height="42"/>
+<text class="h k" x="280" y="266" text-anchor="middle">LOCAL DRAFT</text>
+<text class="s" x="280" y="280" text-anchor="middle">STAGED EDITS</text>
+
+<rect class="b" x="440" y="52" width="184" height="58"/>
+<text class="h" x="532" y="78" text-anchor="middle">PERSIST PLUGIN</text>
+<text class="s" x="532" y="94" text-anchor="middle">WRITES STATE ON CHANGE</text>
+
+<rect class="b" x="440" y="134" width="184" height="34"/>
+<text class="h" x="532" y="155" text-anchor="middle">LOCALSTORAGE</text>
+
+<rect class="b" x="440" y="240" width="184" height="60"/>
+<text class="h" x="532" y="266" text-anchor="middle">MOCK ASYNC DB</text>
+<text class="s" x="532" y="282" text-anchor="middle">SIMULATED LATENCY</text>
+
+<rect class="a" x="440" y="312" width="184" height="32"/>
+<text class="s" x="532" y="324" text-anchor="middle">WRITE-BACK BATCH</text>
+<text class="h k" x="532" y="337" text-anchor="middle">10 CHANGES → 1 API CALL</text>
+
+<line class="l" x1="136" y1="77" x2="190" y2="77" marker-end="url(#ar)"/>
+<text class="s" x="163" y="71" text-anchor="middle">QUERY</text>
+<line class="l" x1="280" y1="102" x2="280" y2="140" marker-end="url(#ar)"/>
+<text class="s" x="288" y="124">CRITERIA</text>
+<line class="l" x1="280" y1="220" x2="280" y2="190" marker-end="url(#ar)"/>
+<text class="s" x="288" y="210">PRODUCTS</text>
+<line class="l" x1="190" y1="165" x2="136" y2="165" marker-end="url(#ar)"/>
+<text class="s" x="163" y="159" text-anchor="middle">LIST</text>
+<line class="a" x1="136" y1="270" x2="190" y2="270" marker-end="url(#ac)"/>
+<text class="s k" x="163" y="264" text-anchor="middle">EDIT</text>
+<line class="a" x1="370" y1="270" x2="440" y2="270" marker-end="url(#ac)"/>
+<text class="s k" x="405" y="264" text-anchor="middle">COMMIT</text>
+
+<line class="l d" x1="370" y1="68" x2="440" y2="68" marker-end="url(#ar)"/>
+<text class="s" x="405" y="62" text-anchor="middle">STATE</text>
+<polyline class="l d" points="370,232 405,232 405,98 440,98" marker-end="url(#ar)"/>
+<line class="l d" x1="532" y1="110" x2="532" y2="134" marker-end="url(#ar)"/>
+<text class="s" x="540" y="125">WRITE</text>
+
+<line class="l" x1="16" y1="322" x2="46" y2="322" style="stroke:#9FDBFF"/>
+<text class="s" x="52" y="325">KEY PATH</text>
+<line class="l d" x1="130" y1="322" x2="160" y2="322"/>
+<text class="s" x="166" y="325">PERSISTENCE</text>
+<line class="l" x1="260" y1="322" x2="290" y2="322"/>
+<text class="s" x="296" y="325">DATA FLOW</text>
+</svg>

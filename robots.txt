@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://locknguyen.github.io/sitemap.xml

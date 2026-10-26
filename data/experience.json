@@ -1,0 +1,65 @@
+{
+  "roles": [
+    {
+      "company": "Vietnamese Baptist Church",
+      "logo": "assets/images/logos/vietnamese-baptist-church.svg",
+      "title": "AI Software Engineer (Volunteer)",
+      "start": "Sep. 2026",
+      "end": "Present",
+      "location": "Winston Salem, NC",
+      "description": "I build and run production software for the congregation, including a PWA with live chat, push notifications and RAG-based Voice AI.",
+      "highlights": [
+        "Built, deployed and maintain a production PWA for 20+ users with live chat, push notifications and RAG-based Voice AI answering Vietnamese questions from English PDFs with citations.",
+        "Isolated each tenant's data via Postgres RLS.",
+        "Built and deployed a resilient AI microservice with multi-provider failover and exponential backoff on Oracle Cloud using Docker, ensuring 99.9% uptime during LLM outages.",
+        "Cut pgvector search from 1.2s to 0.25s using connection pools.",
+        "Ran user acceptance interviews with congregation members and translated feedback into a prioritized backlog, so every release shipped against criteria users had approved beforehand."
+      ],
+      "technologies": [
+        "PWA",
+        "RAG",
+        "PostgreSQL",
+        "pgvector",
+        "Oracle Cloud",
+        "Docker",
+        "LLM APIs"
+      ]
+    },
+    {
+      "company": "OneHope",
+      "logo": "assets/images/logos/onehope.png",
+      "title": "Junior Software Engineer (Full Stack)",
+      "start": "Jan. 2025",
+      "end": "Sep. 2026",
+      "location": "Remote",
+      "description": "Global nonprofit with an 11-person software team serving 300 active users in 100+ countries on an enterprise Vue / C# .NET / SQL Server platform.",
+      "highlights": [
+        "Made the Planning dashboard load its data 20x faster (10s to 0.5s) and cut its chart's database reads 93% by fixing a misplanned SQL Server query and removing duplicate API calls.",
+        "Shipped a flag-gated request tracer (OpenTelemetry, Jaeger) across 14 .NET repos; 3 teammates used it to cut load times 50–70% on 3 pages.",
+        "Remediated a critical security vulnerability by optimizing O(n²) algorithms to O(n) and adding request throttling, while delivering 40+ other production features and fixes.",
+        "Partnered with a product owner and business analyst to modernize a legacy .NET permissions module, turning workflow complaints into approved designs, user stories and specs.",
+        "As an intern, restored 150,000 asset relationships for 22,666 assets with a Python ETL pipeline on the Bynder API, saving an estimated 200+ hours of manual re-linking.",
+        "As an intern, delivered 15+ production features and fixes on an enterprise reporting engine, enforcing row-level security and writing unit tests in Azure DevOps CI/CD."
+      ],
+      "technologies": [
+        "C#",
+        ".NET",
+        "Vue",
+        "SQL Server",
+        "OpenTelemetry",
+        "Jaeger",
+        "Python",
+        "Bynder API",
+        "Azure DevOps",
+        "CI/CD"
+      ],
+      "earlier": [
+        {
+          "title": "Software Engineer Intern",
+          "start": "May 2024",
+          "end": "Aug. 2024"
+        }
+      ]
+    }
+  ]
+}

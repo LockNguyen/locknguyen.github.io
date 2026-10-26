@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+<title>PN-09 ELT Pipeline: dbt + Snowflake + Airflow</title>
+<desc>Blueprint schematic: three sources feed async Python extractors, then the Snowflake raw schema, then dbt staging, intermediate and marts with tests, then dashboards. Airflow orchestrates daily, GitHub Actions runs dbt tests on PRs, and Slack receives failure alerts.</desc>
+<defs>
+<style>
+text{font-family:"IBM Plex Mono",SFMono-Regular,Consolas,monospace;font-size:9px;letter-spacing:.06em;fill:#EAF3FB}
+.t{font-size:10px}
+.m{fill-opacity:.7}
+.k{fill:#9FDBFF}
+.c{text-anchor:middle}
+.s{fill:#0D3B66;stroke:#EAF3FB;stroke-opacity:.6;stroke-width:1}
+.n{fill:none;stroke:#EAF3FB;stroke-opacity:.5;stroke-width:1}
+.l{fill:none;stroke:#EAF3FB;stroke-opacity:.8;stroke-width:1}
+.a{fill:none;stroke:#9FDBFF;stroke-width:1}
+.d{stroke-dasharray:4 3}
+</style>
+<pattern id="g1" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#EAF3FB" stroke-opacity=".05" stroke-width="1"/></pattern>
+<pattern id="g2" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#EAF3FB" stroke-opacity=".09" stroke-width="1"/></pattern>
+<marker id="ah" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L8 4L0 8z" fill="#EAF3FB" fill-opacity=".8"/></marker>
+<marker id="aa" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L8 4L0 8z" fill="#9FDBFF"/></marker>
+</defs>
+<rect width="640" height="360" fill="#0D3B66"/>
+<rect width="640" height="360" fill="url(#g1)"/>
+<rect width="640" height="360" fill="url(#g2)"/>
+
+<rect class="l" x="16" y="16" width="608" height="20"/>
+<text class="t" x="24" y="30">PN-09 · ELT PIPELINE · DBT + SNOWFLAKE + AIRFLOW</text>
+
+<text class="m" x="16" y="55">01 SOURCES</text>
+<text class="m" x="124" y="55">02 EXTRACT</text>
+<text class="m" x="232" y="55">03 LOAD</text>
+<text class="m" x="340" y="55">04 TRANSFORM</text>
+<text class="m" x="510" y="55">05 SERVE</text>
+
+<rect class="s" x="16" y="62" width="88" height="44"/>
+<text class="t c" x="60" y="81">REDDIT</text>
+<text class="m c" x="60" y="94">API</text>
+<rect class="s" x="16" y="122" width="88" height="44"/>
+<text class="t c" x="60" y="141">OPENWEATHER</text>
+<text class="m c" x="60" y="154">API</text>
+<rect class="s" x="16" y="182" width="88" height="44"/>
+<text class="t c" x="60" y="201">SAAS</text>
+<text class="m c" x="60" y="214">POSTGRESQL</text>
+
+<line class="l" x1="104" y1="84" x2="124" y2="84" marker-end="url(#ah)"/>
+<line class="l" x1="104" y1="144" x2="124" y2="144" marker-end="url(#ah)"/>
+<line class="l" x1="104" y1="204" x2="124" y2="204" marker-end="url(#ah)"/>
+
+<rect class="s" x="124" y="62" width="88" height="164"/>
+<text class="t c" x="168" y="120">ASYNC PYTHON</text>
+<text class="t c" x="168" y="134">EXTRACTORS</text>
+<text class="m c" x="168" y="154">HTTPX · PRAW</text>
+<text class="m c" x="168" y="166">PSYCOPG2</text>
+<text class="k c" x="168" y="182">RATE LIMITED</text>
+
+<line class="a" x1="212" y1="144" x2="232" y2="144" marker-end="url(#aa)"/>
+
+<rect class="s" x="232" y="62" width="88" height="164"/>
+<text class="t c" x="276" y="78">SNOWFLAKE</text>
+<text class="m c" x="276" y="90">RAW SCHEMA</text>
+<rect class="n" x="240" y="104" width="72" height="28"/>
+<text class="c" x="276" y="121">RAW_REDDIT</text>
+<rect class="n" x="240" y="138" width="72" height="28"/>
+<text class="c" x="276" y="155">RAW_WEATHER</text>
+<rect class="n" x="240" y="172" width="72" height="28"/>
+<text class="c" x="276" y="189">RAW_SAAS</text>
+
+<line class="a" x1="320" y1="144" x2="340" y2="144" marker-end="url(#aa)"/>
+
+<rect class="s" x="340" y="62" width="150" height="164"/>
+<text class="t c" x="415" y="80">DBT CORE</text>
+<rect class="n" x="360" y="92" width="110" height="28"/>
+<text class="c" x="415" y="109">STAGING</text>
+<rect class="n" x="360" y="138" width="110" height="28"/>
+<text class="c" x="415" y="155">INTERMEDIATE</text>
+<rect class="n" x="360" y="184" width="110" height="28"/>
+<text class="k c" x="415" y="201">MARTS + TESTS</text>
+<line class="a" x1="415" y1="120" x2="415" y2="138" marker-end="url(#aa)"/>
+<line class="a" x1="415" y1="166" x2="415" y2="184" marker-end="url(#aa)"/>
+
+<line class="a" x1="490" y1="144" x2="510" y2="144" marker-end="url(#aa)"/>
+
+<rect class="s" x="510" y="108" width="114" height="72"/>
+<text class="t c" x="567" y="132">ANALYTICS</text>
+<text class="t c" x="567" y="145">DASHBOARDS</text>
+<text class="m c" x="567" y="162">METABASE /</text>
+<text class="m c" x="567" y="173">LOOKER STUDIO</text>
+
+<rect class="l" x="510" y="62" width="114" height="28"/>
+<text class="t k" x="518" y="80">3</text>
+<text class="m" x="534" y="80">SOURCES</text>
+<rect class="l" x="510" y="198" width="114" height="28"/>
+<text class="t k" x="518" y="216">3</text>
+<text class="m" x="534" y="216">DBT LAYERS</text>
+
+<rect class="s" x="16" y="246" width="434" height="36"/>
+<text class="t" x="24" y="261">AIRFLOW · DAILY DAG</text>
+<text class="m" x="24" y="274">EXTRACT → LOAD → DBT RUN → DBT TEST</text>
+<line class="l d" x1="168" y1="246" x2="168" y2="228" marker-end="url(#ah)"/>
+<line class="l d" x1="276" y1="246" x2="276" y2="228" marker-end="url(#ah)"/>
+<line class="l d" x1="415" y1="246" x2="415" y2="228" marker-end="url(#ah)"/>
+
+<rect class="s" x="510" y="246" width="114" height="36"/>
+<text class="t" x="518" y="261">GITHUB ACTIONS</text>
+<text class="m" x="518" y="274">DBT TEST ON PR</text>
+<polyline class="a d" points="510,264 475,264 475,228" marker-end="url(#aa)"/>
+
+<line class="l d" x1="233" y1="282" x2="233" y2="304" marker-end="url(#ah)"/>
+<text class="m" x="241" y="297">ON FAIL</text>
+<rect class="s" x="16" y="304" width="434" height="40"/>
+<text class="t" x="24" y="321">SLACK ALERTS</text>
+<text class="m" x="24" y="334">WEBHOOK NOTIFICATION ON TASK FAILURE</text>
+
+<rect class="l" x="510" y="304" width="114" height="28"/>
+<text class="t k" x="518" y="322">1</text>
+<text class="m" x="534" y="322">DAILY DAG</text>
+</svg>
